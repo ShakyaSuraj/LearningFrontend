@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+.header {
+    margin: 0px;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b5e2fa;
+
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+}
+
+.logo p{
+    margin: 0px;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+}
+
+.nav-bar li .about{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar li .contact{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* hero section starts here */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+
+
+/* for text animation */
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #000000;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+/* text animation ends here */
+
+
+/* hero image starts here */
+.hero .img img {
+    display: inline-block;
+    border: 5px solid black;
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 50px;
+}
+
+.hero .img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+
+/* hero image ends here */
+
+/* hero section ends here */
+
+
+/* about section starts here */
+
+.about{
+    margin: 20px 0;
+}
+
+.about h2 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.about_me {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hobbies, .skills, .education{
+    /* border: 1px solid black; */
+    box-shadow: 0 2px 4px #F9F9F9;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    margin: 15px;
+    background-color: #edf6f9;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about_me  .title {
+    font-size: 30px;
+    color: #FC6D6D;
+}
+
+
+
+/* contact section starts here */
+.contact {
+    margin: 20px 0;
+}
+
+.contact h2 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.information {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact_img {
+    margin-right: 20px;
+}
+
+.contact_img img {
+    width: 400px;
+    height: 400px;
+}
+
+.contact_info {
+    width: 800px;
+    padding: 20px;
+    background-color: #edf6f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* footer starts here */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #b5e2fa;
+    color: black;
+    padding: 20px 50px;
+}
+
+.footer .social_icons {
+    padding: 0 20px;
+}
+
+.social_icons img{
+ padding: 10px;
+
+}
+
+
